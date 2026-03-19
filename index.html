@@ -8,83 +8,308 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        :root {x;
+        :root {
             --navy: #1B263B;
             --slate: #415A77;
             --light-slate: #778DA9;
             --sage: #84A98C;
             --off-white: #F8F9FA;
             --text-gray: #2D3436;
-     }
-        /* Logo Styling */
+        }
+
         .logo img {
-        height: 200px; /* Adjust this number to change your logo size */
-        width: auto;  /* Keeps the logo from stretching */
-        display: block;
-        transition: opacity 0.3s ease;
-      }
+            height: 90px;
+            width: auto;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
 
         .logo img:hover {
-         opacity: 0.8; /* Subtle interaction when hovering */
+            opacity: 0.8;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--off-white); color: var(--text-gray); line-height: 1.7; -webkit-font-smoothing: antialiased; }
-        h1, h2, h3 { color: var(--navy); font-weight: 600; letter-spacing: -0.02em; }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--off-white);
+            color: var(--text-gray);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
 
-        /* Navigation */
-        nav { background: white; padding: 1.2rem 0; border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .nav-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.1rem; color: var(--navy); text-decoration: none; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
-        .nav-links a { text-decoration: none; color: var(--slate); font-size: 0.85rem; font-weight: 500; margin-left: 2rem; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--sage); }
+        h1, h2, h3 {
+            color: var(--navy);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
 
-        /* Hero */
-        .hero { padding: 140px 0; background: var(--navy); color: white; }
-        .hero h1 { color: white; font-size: 2.8rem; margin-bottom: 1.2rem; line-height: 1.2; }
-        .hero p { font-size: 1.1rem; max-width: 600px; margin-bottom: 2.5rem; opacity: 0.85; font-weight: 300; }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-        section { padding: 100px 0; }
-        .section-title { font-size: 1.8rem; margin-bottom: 3rem; position: relative; text-transform: uppercase; letter-spacing: 1px; }
-        .section-title::after { content: ''; display: block; width: 30px; height: 3px; background: var(--sage); margin-top: 10px; }
+        nav {
+            background: white;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-        /* Strategic Evaluation Section */
-        .problem-section { background: white; }
-        .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
-        .problem-card { padding: 2.5rem; background: var(--off-white); border-radius: 4px; transition: all 0.4s ease; border: 1px solid transparent; }
-        .problem-card:hover { border: 1px solid var(--sage); transform: translateY(-5px); background: white; box-shadow: 0 15px 40px rgba(0,0,0,0.05); }
-        .problem-card h3 { font-size: 1.1rem; margin-bottom: 1rem; color: var(--navy); text-transform: uppercase; letter-spacing: 1px; }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-        /* About & Stack */
-        .about-stack { background: var(--off-white); }
-        .stack-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; }
-        .stack-item { background: white; padding: 1rem; text-align: center; border-radius: 2px; font-size: 0.75rem; font-weight: 500; color: var(--slate); border: 1px solid rgba(0,0,0,0.05); text-transform: uppercase; letter-spacing: 1px; }
+        .logo {
+            font-size: 1.1rem;
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
 
-        /* Services */
-        .services { background: white; }
-        .pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; }
-        .pillar h3 { font-size: 1.3rem; margin-bottom: 1.2rem; color: var(--navy); }
-        .pillar ul { list-style: none; margin-top: 1.5rem; }
-        .pillar li { margin-bottom: 1rem; padding-left: 1.8rem; position: relative; font-size: 0.95rem; font-weight: 300; color: var(--slate); }
-        .pillar li::before { content: ''; position: absolute; left: 0; top: 12px; width: 15px; height: 1px; background: var(--sage); }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--slate);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
 
-        .alacarte { margin-top: 6rem; padding-top: 4rem; border-top: 1px solid #eee; }
-        .alacarte-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
-        .alacarte-item { padding: 1.5rem; background: white; border: 1px solid #eee; border-radius: 2px; text-align: center; font-size: 0.85rem; font-weight: 500; color: var(--light-slate); text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover {
+            color: var(--sage);
+        }
 
-        /* Buttons */
-        .btn { display: inline-block; background: var(--sage); color: white; padding: 1.1rem 2.4rem; text-decoration: none; font-weight: 500; border-radius: 2px; transition: 0.3s; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
-        .btn:hover { background: #729679; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(132, 169, 140, 0.2); }
+        .hero {
+            padding: 140px 0;
+            background: var(--navy);
+            color: white;
+        }
 
-        footer { padding: 100px 0; text-align: center; background: var(--navy); color: white; }
-        footer h2 { color: white; margin-bottom: 2rem; font-weight: 400; font-size: 2rem; }
+        .hero h1 {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            opacity: 0.85;
+            font-weight: 300;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: var(--sage);
+            margin-top: 10px;
+        }
+
+        .problem-section {
+            background: white;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .problem-card {
+            padding: 2.5rem;
+            background: var(--off-white);
+            border-radius: 4px;
+            transition: all 0.4s ease;
+            border: 1px solid transparent;
+        }
+
+        .problem-card:hover {
+            border: 1px solid var(--sage);
+            transform: translateY(-5px);
+            background: white;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+        }
+
+        .problem-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-stack {
+            background: var(--off-white);
+        }
+
+        .stack-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .stack-item {
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 2px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--slate);
+            border: 1px solid rgba(0,0,0,0.05);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .services {
+            background: white;
+        }
+
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+        }
+
+        .pillar h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            color: var(--navy);
+        }
+
+        .pillar ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .pillar li {
+            margin-bottom: 1rem;
+            padding-left: 1.8rem;
+            position: relative;
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: var(--slate);
+        }
+
+        .pillar li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 15px;
+            height: 1px;
+            background: var(--sage);
+        }
+
+        .alacarte {
+            margin-top: 6rem;
+            padding-top: 4rem;
+            border-top: 1px solid #eee;
+        }
+
+        .alacarte-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .alacarte-item {
+            padding: 1.5rem;
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 2px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--light-slate);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--sage);
+            color: white;
+            padding: 1.1rem 2.4rem;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 2px;
+            transition: 0.3s;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background: #729679;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(132, 169, 140, 0.2);
+        }
+
+        footer {
+            padding: 100px 0;
+            text-align: center;
+            background: var(--navy);
+            color: white;
+        }
+
+        footer h2 {
+            color: white;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            font-size: 2rem;
+        }
 
         @media (max-width: 768px) {
-            .stack-grid { grid-template-columns: repeat(2, 1fr); }
-            .hero h1 { font-size: 2.2rem; }
+            .stack-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .nav-links a {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
@@ -93,8 +318,8 @@
     <nav>
         <div class="container nav-content">
             <a href="#" class="logo">
-    <img src="logo.svg" alt="SystemFlow Solutions Logo">
-</a>
+                <img src="logo.svg" alt="SystemFlow Solutions Logo">
+            </a>
             <div class="nav-links">
                 <a href="#evaluation">Evaluation</a>
                 <a href="#principal">The Principal</a>
