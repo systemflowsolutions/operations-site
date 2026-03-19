@@ -1,431 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SystemFlow Solutions | Systems & Process Specialist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        :root {
-            --navy: #1B263B;
-            --slate: #415A77;
-            --light-slate: #778DA9;
-            --sage: #84A98C;
-            --off-white: #F8F9FA;
-            --text-gray: #2D3436;
-        }
-
-        .logo img {
-            height: 90px;
-            width: auto;
-            display: block;
-            transition: opacity 0.3s ease;
-        }
-
-        .logo img:hover {
-            opacity: 0.8;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--off-white);
-            color: var(--text-gray);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3 {
-            color: var(--navy);
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        nav {
-            background: white;
-            padding: 1.2rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.1rem;
-            color: var(--navy);
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--slate);
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-left: 2rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--sage);
-        }
-
-        .hero {
-            padding: 140px 0;
-            background: var(--navy);
-            color: white;
-        }
-
-        .hero h1 {
-            color: white;
-            font-size: 2.8rem;
-            margin-bottom: 1.2rem;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin-bottom: 2.5rem;
-            opacity: 0.85;
-            font-weight: 300;
-        }
-
-        section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 3rem;
-            position: relative;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 30px;
-            height: 3px;
-            background: var(--sage);
-            margin-top: 10px;
-        }
-
-        .problem-section {
-            background: white;
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .problem-card {
-            padding: 2.5rem;
-            background: var(--off-white);
-            border-radius: 4px;
-            transition: all 0.4s ease;
-            border: 1px solid transparent;
-        }
-
-        .problem-card:hover {
-            border: 1px solid var(--sage);
-            transform: translateY(-5px);
-            background: white;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-        }
-
-        .problem-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            color: var(--navy);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .about-stack {
-            background: var(--off-white);
-        }
-
-        .stack-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .stack-item {
-            background: white;
-            padding: 1rem;
-            text-align: center;
-            border-radius: 2px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: var(--slate);
-            border: 1px solid rgba(0,0,0,0.05);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .services {
-            background: white;
-        }
-
-        .pillar-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 4rem;
-        }
-
-        .pillar h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.2rem;
-            color: var(--navy);
-        }
-
-        .pillar ul {
-            list-style: none;
-            margin-top: 1.5rem;
-        }
-
-        .pillar li {
-            margin-bottom: 1rem;
-            padding-left: 1.8rem;
-            position: relative;
-            font-size: 0.95rem;
-            font-weight: 300;
-            color: var(--slate);
-        }
-
-        .pillar li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 12px;
-            width: 15px;
-            height: 1px;
-            background: var(--sage);
-        }
-
-        .alacarte {
-            margin-top: 6rem;
-            padding-top: 4rem;
-            border-top: 1px solid #eee;
-        }
-
-        .alacarte-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .alacarte-item {
-            padding: 1.5rem;
-            background: white;
-            border: 1px solid #eee;
-            border-radius: 2px;
-            text-align: center;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--light-slate);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--sage);
-            color: white;
-            padding: 1.1rem 2.4rem;
-            text-decoration: none;
-            font-weight: 500;
-            border-radius: 2px;
-            transition: 0.3s;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .btn:hover {
-            background: #729679;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(132, 169, 140, 0.2);
-        }
-
-        footer {
-            padding: 100px 0;
-            text-align: center;
-            background: var(--navy);
-            color: white;
-        }
-
-        footer h2 {
-            color: white;
-            margin-bottom: 2rem;
-            font-weight: 400;
-            font-size: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .stack-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .nav-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .nav-links {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-
-            .nav-links a {
-                margin-left: 0;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SystemFlow Solutions | Structure Your Business to Scale</title>
+  <meta name="description" content="SystemFlow Solutions helps growing businesses streamline operations, document processes, and build systems that support sustainable growth.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav>
+    <div class="container nav-content">
+      <a href="index.html" class="logo"><img src="logo.svg" alt="SystemFlow Solutions logo"></a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="software-stack.html">Software Stack</a>
+        <a href="discovery.html" class="btn">Discovery Form</a>
+      </div>
+    </div>
+  </nav>
 
-    <nav>
-        <div class="container nav-content">
-            <a href="#" class="logo">
-                <img src="logo.svg" alt="SystemFlow Solutions Logo">
-            </a>
-            <div class="nav-links">
-                <a href="#evaluation">Evaluation</a>
-                <a href="#principal">The Principal</a>
-                <a href="#solutions">Solutions</a>
-                <a href="mailto:hello@yourdomain.com" class="btn" style="color: white; margin-left: 2rem; padding: 0.7rem 1.8rem;">Inquire</a>
-            </div>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">OPERATIONS • SYSTEMS • SCALABILITY</p>
+        <h1>Structure your business to scale with confidence.</h1>
+        <p>SystemFlow Solutions helps growing businesses simplify operations, document processes, and build the systems behind sustainable growth — so your business no longer depends on memory, guesswork, or constant firefighting.</p>
+        <div class="hero-actions">
+          <a href="discovery.html" class="btn">Book a Discovery Call</a>
+          <a href="services.html" class="btn btn-outline">View Services</a>
         </div>
-    </nav>
+      </div>
+      <aside class="hero-card">
+        <h3>What we help with</h3>
+        <ul>
+          <li>SOP development and documentation</li>
+          <li>Workflow design and optimization</li>
+          <li>Operational cleanup and organization</li>
+          <li>Software setup and implementation</li>
+          <li>Ongoing support as your business grows</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
 
-    <header class="hero">
-        <div class="container">
-            <h1>Complexity, Simplified.</h1>
-            <p>Boutique operations strategy for visionary founders. We design the sophisticated infrastructure required to sustain high-level expansion.</p>
-            <a href="#solutions" class="btn">Examine Solutions</a>
+  <section class="band">
+    <div class="container band-grid">
+      <div class="band-item"><strong>Clear processes</strong><span>Documented systems your team can follow with confidence.</span></div>
+      <div class="band-item"><strong>Operational visibility</strong><span>Cleaner workflows, fewer bottlenecks, and stronger accountability.</span></div>
+      <div class="band-item"><strong>Scalable structure</strong><span>The foundation your business needs to grow well.</span></div>
+    </div>
+  </section>
+
+  <section class="section-light">
+    <div class="container">
+      <p class="kicker">When growth gets messy</p>
+      <h2 class="section-title">What worked when you started won't support where you're going.</h2>
+      <p class="section-intro">If your operations feel reactive, inconsistent, or overly dependent on you to function, you do not have a motivation problem. You have a systems problem. SystemFlow Solutions helps you replace scattered processes with thoughtful structure so your team can operate with more clarity, consistency, and confidence.</p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Inconsistent execution</h3>
+          <p>Important tasks get handled differently by different people because the process lives in someone's head instead of somewhere your team can actually use.</p>
         </div>
-    </header>
-
-    <section id="evaluation" class="problem-section">
-        <div class="container">
-            <h2 class="section-title">Strategic Evaluation</h2>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <h3>Operational Plateaus</h3>
-                    <p>When current systems no longer support your trajectory, innovation stalls. We identify the pivot points for your next level of scale.</p>
-                </div>
-                <div class="problem-card">
-                    <h3>Margin Erosion</h3>
-                    <p>Inefficiency is a silent tax on your profitability. We recover resources through intentional process optimization.</p>
-                </div>
-                <div class="problem-card">
-                    <h3>Operational Noise</h3>
-                    <p>As complexity increases, clarity decreases. We distill your internal workflows into a calm, repeatable rhythm.</p>
-                </div>
-            </div>
+        <div class="card">
+          <h3>Owner dependency</h3>
+          <p>Your business keeps moving, but only because you are the one holding all the pieces together, answering every question, and filling every gap.</p>
         </div>
-    </section>
-
-    <section id="principal" class="about-stack">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 5rem; align-items: start;">
-                <div>
-                    <h2 class="section-title">The Principal</h2>
-                    <p>I’m [Your Name], an Operations Strategist dedicated to the art of professional efficiency. I believe that high-growth businesses deserve more than just "tools"—they require a philosophy of order.</p>
-                    <p style="margin-top: 1.5rem;">My partnership-driven approach focuses on elevating your internal ecosystem so your team can focus on their highest contribution.</p>
-                </div>
-                <div>
-                    <h3 style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--light-slate); margin-bottom: 1.5rem;">The Tech Ecosystem</h3>
-                    <div class="stack-grid">
-                        <div class="stack-item">Notion</div>
-                        <div class="stack-item">ClickUp</div>
-                        <div class="stack-item">Zapier</div>
-                        <div class="stack-item">Airtable</div>
-                        <div class="stack-item">Slack</div>
-                        <div class="stack-item">Asana</div>
-                        <div class="stack-item">Make</div>
-                        <div class="stack-item">Monday</div>
-                    </div>
-                </div>
-            </div>
+        <div class="card">
+          <h3>Operational bottlenecks</h3>
+          <p>Work slows down, details get missed, and growth feels heavier than it should because the infrastructure behind the business is underbuilt.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="solutions" class="services">
-        <div class="container">
-            <h2 class="section-title">Strategic Solutions</h2>
-            <div class="pillar-grid">
-                <div class="pillar">
-                    <h3>Operations Diagnostic</h3>
-                    <p>A high-level audit of your current tech stack, human capital, and workflow integrity to reveal opportunities for optimization.</p>
-                    <ul>
-                        <li>Infrastructure Rationalization</li>
-                        <li>Workflow Visualization</li>
-                        <li>Efficiency Mapping</li>
-                    </ul>
-                </div>
-                <div class="pillar">
-                    <h3>Ecosystem Integration</h3>
-                    <p>The custom-built architecture of your business. We design and implement the systems that allow for seamless delivery at scale.</p>
-                    <ul>
-                        <li>Proprietary CRM Design</li>
-                        <li>Client Journey Automation</li>
-                        <li>Centralized Intelligence Hubs</li>
-                    </ul>
-                </div>
-            </div>
+  <section class="section-muted">
+    <div class="container split">
+      <div class="copy">
+        <p class="kicker">Built from real operations experience</p>
+        <h2 class="section-title">This isn't theory. It's operational strategy grounded in real business execution.</h2>
+        <p>SystemFlow Solutions was built for growing businesses that need more than another app, another spreadsheet, or another patchwork fix. The work is about creating internal structure that actually supports the way your business runs.</p>
+        <p>With a background in accounting, operations, and business systems, the approach is both strategic and practical. Every recommendation is made with your workflow, your people, and your numbers in mind.</p>
+        <a href="about.html" class="btn" style="margin-top:1.5rem;">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>What makes the work different</h3>
+        <ul class="list-clean">
+          <li>Systems designed for real implementation, not just pretty diagrams</li>
+          <li>Operational thinking shaped by accounting and process visibility</li>
+          <li>Structure built to support growth without unnecessary complexity</li>
+          <li>Partnership that balances strategy, practicality, and trust</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-            <div class="alacarte">
-                <h3 style="margin-bottom: 2rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; color: var(--light-slate); text-align: center;">Boutique Engagements</h3>
-                <div class="alacarte-grid">
-                    <div class="alacarte-item">SOP Refinement</div>
-                    <div class="alacarte-item">Platform Migration</div>
-                    <div class="alacarte-item">Automation Sprints</div>
-                    <div class="alacarte-item">Fractional Support</div>
-                </div>
-            </div>
+  <section class="section-light">
+    <div class="container">
+      <p class="kicker">Services overview</p>
+      <h2 class="section-title">Practical structure for real businesses.</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Operations Diagnostic</h3>
+          <p>A review of your current workflows, team handoffs, systems, and operational pain points to uncover where clarity and structure are missing.</p>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <h2>Optimize your orbit.</h2>
-            <a href="mailto:hello@yourdomain.com" class="btn">Inquire for Q3 Availability</a>
-            <p style="margin-top: 5rem; font-size: 0.65rem; opacity: 0.4; letter-spacing: 2px; text-transform: uppercase;">© 2026 SystemFlow Solutions</p>
+        <div class="card">
+          <h3>SOP Development</h3>
+          <p>Clear, usable documentation that supports consistency, training, accountability, and smoother execution across the team.</p>
         </div>
-    </footer>
+        <div class="card">
+          <h3>Workflow Optimization</h3>
+          <p>Improved processes that reduce friction, eliminate redundancy, and help work move through your business more efficiently.</p>
+        </div>
+        <div class="card">
+          <h3>Systems & Software Setup</h3>
+          <p>Thoughtful setup of tools that fit your business model and support the operations behind delivery, communication, and growth.</p>
+        </div>
+      </div>
+      <a href="services.html" class="btn" style="margin-top:2rem;">Explore Services</a>
+    </div>
+  </section>
 
-    <script>lucide.createIcons();</script>
+  <section class="cta-section">
+    <div class="container">
+      <h2>Let's build the structure your business needs to grow well.</h2>
+      <p>The goal is not just to be more organized. The goal is to create a business that runs with greater clarity, consistency, and sustainability.</p>
+      <a href="discovery.html" class="btn">Start the Discovery Process</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>SystemFlow Solutions</h3>
+        <p>Operational clarity for growing businesses.</p>
+      </div>
+      <div>
+        <p>Replace hello@yourdomain.com with your real inquiry email.</p>
+        <p>© 2026 SystemFlow Solutions</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
