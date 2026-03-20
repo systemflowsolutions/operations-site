@@ -389,3 +389,62 @@ footer {
   .btn { width: 100%; }
   .footer-grid { flex-direction: column; align-items: flex-start; }
 }
+/* =========================
+   Calendly Embed Styling
+   ========================= */
+
+.calendly-shell {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+/* The actual Calendly iframe container */
+.calendly-inline-widget {
+  min-width: 320px;
+  height: 850px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Intro text alignment on discovery page */
+.discovery-intro {
+  max-width: 720px;
+}
+
+/* Small note under calendar */
+.discovery-note {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--slate);
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.95rem;
+}
+
+/* Expectation card polish */
+.expectation-card h3 {
+  margin-bottom: 1rem;
+}
+
+/* Tighten spacing inside expectation list */
+.expectation-card .list-clean li:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   Mobile Optimization
+   ========================= */
+
+@media (max-width: 768px) {
+  .calendly-shell {
+    padding: 0.75rem;
+  }
+
+  .calendly-inline-widget {
+    height: 720px;
+  }
+}
