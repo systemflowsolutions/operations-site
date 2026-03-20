@@ -224,8 +224,18 @@ section { padding: 92px 0; }
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-.band-item {
-  padding: 1.2rem 1rem;
+..band-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: 0.25s ease;
+}
+
+.band-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(27, 38, 59, 0.12);
 }
 .band-item strong {
   display: block;
