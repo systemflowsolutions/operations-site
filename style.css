@@ -240,9 +240,29 @@ section { padding: 92px 0; }
 .band-item strong {
   display: block;
   color: var(--navy);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
 }
-.band-item span { color: var(--slate); font-size: 0.94rem; }
+
+.band-item span {
+  color: var(--slate);
+  font-size: 0.9rem;
+  line-height: 1.5;
+ }
+.band-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.band-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--sage);
+}
 
 .list-clean {
   list-style: none;
