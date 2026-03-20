@@ -219,24 +219,29 @@ section { padding: 92px 0; }
   border-top: 1px solid rgba(27, 38, 59, 0.06);
   border-bottom: 1px solid rgba(27, 38, 59, 0.06);
 }
+
 .band-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
-..band-item {
+
+.band-item {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
   box-shadow: var(--shadow);
   transition: 0.25s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .band-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 20px 40px rgba(27, 38, 59, 0.12);
 }
+
 .band-item strong {
   display: block;
   color: var(--navy);
@@ -248,10 +253,6 @@ section { padding: 92px 0; }
   color: var(--slate);
   font-size: 0.9rem;
   line-height: 1.5;
- }
-.band-item {
-  position: relative;
-  overflow: hidden;
 }
 
 .band-item::before {
