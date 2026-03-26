@@ -176,7 +176,7 @@ section { padding: 92px 0; }
   margin-bottom: 1rem;
 }
 .section-intro {
-  max-width: 760px;
+  max-width: 1000px;
   color: var(--slate);
   margin-bottom: 3rem;
 }
