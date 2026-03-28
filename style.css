@@ -478,4 +478,58 @@ footer {
   .calendly-inline-widget {
     height: 720px;
   }
+  /* Legal pages */
+
+.legal-page {
+  min-height: calc(100vh - 220px);
+}
+
+.legal-wrap {
+  max-width: 900px;
+}
+
+.legal-updated {
+  color: var(--light-slate);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.legal-card {
+  padding: 2.25rem;
+}
+
+.legal-card h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.legal-card h3:first-of-type {
+  margin-top: 0;
+}
+
+.legal-card p {
+  color: var(--slate);
+}
+
+.legal-card p + p {
+  margin-top: 1rem;
+}
+
+.legal-card a {
+  color: var(--sage-dark);
+  text-decoration: none;
+}
+
+.legal-card a:hover {
+  text-decoration: underline;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+footer a:hover {
+  color: white;
+}
 }
