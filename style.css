@@ -499,12 +499,12 @@ footer {
 
 .legal-card h3 {
   margin-top: 2rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.0rem;
   font-size: 1.05rem;
 }
 
 .legal-card h3:first-of-type {
-  margin-top: 0;
+  margin-top: 0.25;
 }
 
 .legal-card p {
