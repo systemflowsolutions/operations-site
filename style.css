@@ -477,7 +477,7 @@ footer {
 
   .calendly-inline-widget {
     height: 720px;
-  /* Legal pages */
+/* Legal pages */
 
 .legal-page {
   min-height: calc(100vh - 220px);
@@ -503,19 +503,19 @@ footer {
 }
 
 .legal-card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.75rem;
   color: var(--navy);
-}
-
-/* force space before every section heading after the first */
-.legal-card p + h3 {
-  margin-top: 2.5rem;
-  padding-top: 1.25rem;
+  font-size: 1.05rem;
+  display: block;
+  margin-top: 2.5rem !important;
+  margin-bottom: 0.75rem !important;
+  padding-top: 1rem;
   border-top: 1px solid var(--border);
 }
 
-/* keep links styled cleanly */
+.legal-card h3:first-of-type {
+  margin-top: 1.5rem !important;
+}
+
 .legal-card a {
   color: var(--sage-dark);
   text-decoration: none;
