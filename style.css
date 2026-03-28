@@ -498,13 +498,17 @@ footer {
 }
 
 .legal-card h3 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
   font-size: 1.05rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
 }
 
 .legal-card h3:first-of-type {
-  margin-top: 0.25;
+  margin-top: 1.5rem;
+  border-top: none;
+  padding-top: 0;
 }
 
 .legal-card p {
