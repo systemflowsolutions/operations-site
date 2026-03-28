@@ -499,15 +499,17 @@ footer {
 
 .legal-card p {
   color: var(--slate);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
 }
 
 .legal-card h3 {
   color: var(--navy);
   font-size: 1.05rem;
   display: block;
-  margin-top: 2.5rem !important;
-  margin-bottom: 0.75rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.4rem;
+  font-size: 1.05rem;
   padding-top: 1rem;
   border-top: 1px solid var(--border);
 }
