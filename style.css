@@ -477,8 +477,7 @@ footer {
 
   .calendly-inline-widget {
     height: 720px;
-  }
-  /* Legal pages */
+  }/* Legal pages */
 
 .legal-page {
   min-height: calc(100vh - 220px);
