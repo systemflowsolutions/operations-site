@@ -525,4 +525,17 @@ footer {
 .legal-simple-card a:hover {
   text-decoration: underline;
 }
+    /* Clean subsection spacing for legal pages */
+
+.legal-simple-card h2 {
+  margin: 2rem 0 0.5rem 0;
+}
+
+.legal-simple-card h2:first-of-type {
+  margin-top: 1rem;
+}
+
+.legal-simple-card p {
+  margin: 0 0 1rem 0;
+}
 }
