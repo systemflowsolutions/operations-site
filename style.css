@@ -539,7 +539,7 @@ small.note {
   margin-bottom: 0;
 }
 
-/* ===== Legal Pages (Matches Your HTML) ===== */
+/* ===== Legal Pages (Boxed Version) ===== */
 
 .legal {
   padding: 90px 0;
@@ -555,44 +555,47 @@ small.note {
   font-size: 0.95rem;
 }
 
-.legal-content {
+/* The box */
+.legal-card {
   padding: 2.2rem;
 }
 
+/* Intro paragraph */
 .legal-intro {
-  font-size: 1rem;
   color: var(--slate);
   margin-bottom: 1.5rem;
 }
 
-/* KEY: clean spacing control */
-.legal-block {
+/* Each section */
+.legal-section {
   margin-top: 2rem;
 }
 
-.legal-block:first-of-type {
+.legal-section:first-of-type {
   margin-top: 0;
 }
 
-.legal-block h3 {
+/* Headings */
+.legal-section h3 {
   font-size: 1.05rem;
-  margin-bottom: 0.5rem;
   color: var(--navy);
+  margin-bottom: 0.5rem;
 }
 
-.legal-block p {
+/* Paragraphs */
+.legal-section p {
   margin: 0;
   color: var(--slate);
   line-height: 1.65;
 }
 
-/* links */
-.legal-content a {
+/* Links */
+.legal-card a {
   color: var(--sage-dark);
   text-decoration: none;
 }
 
-.legal-content a:hover {
+.legal-card a:hover {
   text-decoration: underline;
 }
 
