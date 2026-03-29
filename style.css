@@ -477,67 +477,7 @@ footer {
 
   .calendly-inline-widget {
     height: 720px;
-/* Simple legal pages */
 
-.legal-simple {
-  padding: 72px 0;
-}
-
-.legal-simple-wrap {
-  max-width: 860px;
-}
-
-.legal-simple-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 2rem;
-}
-
-.legal-simple-card p {
-  color: var(--slate);
-  line-height: 1.65;
-  margin: 0 0 1rem 0;
-}
-
-.legal-simple-card h2 {
-  color: var(--navy);
-  font-size: 1.1rem;
-  margin: 1.75rem 0 0.6rem 0;
-}
-
-.legal-simple-card h2:first-of-type {
-  margin-top: 0.5rem;
-}
-
-.legal-meta {
-  color: var(--light-slate);
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-}
-
-.legal-simple-card a {
-  color: var(--sage-dark);
-  text-decoration: none;
-}
-
-.legal-simple-card a:hover {
-  text-decoration: underline;
-}
-    /* Clean subsection spacing for legal pages */
-
-.legal-simple-card h2 {
-  margin: 2rem 0 0.5rem 0;
-}
-
-.legal-simple-card h2:first-of-type {
-  margin-top: 1rem;
-}
-
-.legal-simple-card p {
-  margin: 0 0 1rem 0;
-}
     /* ===== Legal Pages (On-Brand) ===== */
 
 .legal {
