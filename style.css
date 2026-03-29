@@ -539,63 +539,53 @@ small.note {
   margin-bottom: 0;
 }
 
-/* ===== Legal Pages (Boxed Version) ===== */
+/* Legal pages */
 
-.legal {
+.legal-page-wrap {
   padding: 90px 0;
 }
 
-.legal-wrap {
+.legal-page-container {
   max-width: 820px;
 }
 
-.legal-meta {
+.legal-date {
   color: var(--light-slate);
   margin-bottom: 2rem;
   font-size: 0.95rem;
 }
 
-/* The box */
-.legal-card {
+.legal-page-card {
   padding: 2.2rem;
 }
 
-/* Intro paragraph */
-.legal-intro {
+.legal-lead {
   color: var(--slate);
   margin-bottom: 1.5rem;
 }
 
-/* Each section */
-.legal-section {
+.legal-item + .legal-item {
   margin-top: 2rem;
 }
 
-.legal-section:first-of-type {
-  margin-top: 0;
-}
-
-/* Headings */
-.legal-section h3 {
+.legal-item h3 {
   font-size: 1.05rem;
   color: var(--navy);
   margin-bottom: 0.5rem;
 }
 
-/* Paragraphs */
-.legal-section p {
+.legal-item p {
   margin: 0;
   color: var(--slate);
   line-height: 1.65;
 }
 
-/* Links */
-.legal-card a {
+.legal-page-card a {
   color: var(--sage-dark);
   text-decoration: none;
 }
 
-.legal-card a:hover {
+.legal-page-card a:hover {
   text-decoration: underline;
 }
 
