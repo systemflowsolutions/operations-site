@@ -92,34 +92,31 @@ nav {
   flex-wrap: wrap;
 }
 
-.nav-links a {
+/* Regular nav links only */
+.nav-links a:not(.btn) {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--slate);
   transition: color 0.25s ease;
+  text-decoration: none;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:not(.btn):hover,
+.nav-links a:not(.btn).active {
   color: var(--sage);
 }
 
-/* Buttons */
-
-/* Base button */
-a.btn,
-a.btn:link,
-a.btn:visited,
-a.btn:hover,
-a.btn:focus,
-a.btn:active {
+/* Button styles */
+.nav-links a.btn,
+.nav-links a.btn:link,
+.nav-links a.btn:visited {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.95rem 1.8rem;
   border-radius: 4px;
   background: var(--sage);
-  color: #ffffff !important;
+  color: #ffffff;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -127,6 +124,50 @@ a.btn:active {
   text-decoration: none;
   transition: 0.25s ease;
   border: 1px solid transparent;
+}
+
+.nav-links a.btn:hover,
+.nav-links a.btn:focus {
+  background: var(--sage-dark);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(132, 169, 140, 0.22);
+}
+
+.nav-links a.btn:active,
+.nav-links a.btn.active,
+.nav-links a.btn[aria-current="page"] {
+  background: var(--sage-dark);
+  color: #ffffff;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Outline button */
+.nav-links a.btn-outline,
+.nav-links a.btn-outline:link,
+.nav-links a.btn-outline:visited {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid rgba(27, 38, 59, 0.14);
+  text-decoration: none;
+}
+
+.nav-links a.btn-outline:hover,
+.nav-links a.btn-outline:focus {
+  background: white;
+  color: var(--navy);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(27, 38, 59, 0.08);
+}
+
+.nav-links a.btn-outline:active,
+.nav-links a.btn-outline.active,
+.nav-links a.btn-outline[aria-current="page"] {
+  background: white;
+  color: var(--navy);
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 /* Hover */
