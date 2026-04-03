@@ -120,24 +120,51 @@ nav {
   text-transform: uppercase;
   transition: 0.25s ease;
   border: 1px solid transparent;
+  text-decoration: none;
+}
+
+.btn:visited {
+  color: white;
 }
 
 .btn:hover {
   background: var(--sage-dark);
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(132, 169, 140, 0.22);
+}
+
+.btn:active {
+  background: var(--sage-dark);
+  color: white;
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .btn-outline {
   background: transparent;
   color: var(--navy);
   border-color: rgba(27, 38, 59, 0.14);
+  text-decoration: none;
+}
+
+.btn-outline:visited {
+  color: var(--navy);
 }
 
 .btn-outline:hover {
   background: white;
+  color: var(--navy);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(27, 38, 59, 0.08);
 }
 
+.btn-outline:active {
+  background: white;
+  color: var(--navy);
+  transform: translateY(0);
+  box-shadow: none;
+}
 /* Hero */
 
 .hero {
